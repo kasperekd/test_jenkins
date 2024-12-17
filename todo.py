@@ -1,3 +1,5 @@
+import time
+
 class Task:
     def __init__(self, title):
         self.title = title
@@ -42,16 +44,16 @@ def main():
     todo_list.add_task("Купить продукты")
     todo_list.add_task("Сделать домашнее задание")
     todo_list.add_task("Погулять с собакой")
-
     todo_list.display_tasks()
-
     todo_list.remove_task(1) 
-
     todo_list.display_tasks()
-
     todo_list.tasks[0].mark_completed()
 
     todo_list.display_tasks()
+    
+    while True:
+        print("Программа работает...")
+        time.sleep(5)  
 
 
 if __name__ == "__main__":
